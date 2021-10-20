@@ -5,7 +5,7 @@
 - Download the repo
 - Register in [Open Weather App]("https://openweathermap.org/api")
 - Generate your own `api key`
-- Put your `api key` into `src/App.js`
+- Put your `api key` into `src/components/WeatherApp.js`
 
 ```
 const api = {

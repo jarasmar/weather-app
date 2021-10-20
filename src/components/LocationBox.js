@@ -20,7 +20,7 @@ class LocationBox extends React.Component {
     render() {
         return (
             <div className="location-box">
-                <div className="location">Helsinki, FI</div>
+                <div className="location">{this.props.weather.name }, { this.props.weather.sys.country }</div>
                 <div className="date">{ this.buildDate(this.props.date) }</div>
             </div>
         )

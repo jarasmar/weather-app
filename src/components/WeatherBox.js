@@ -1,14 +1,12 @@
 import React from "react";
 
-class WeatherBox extends React.Component {
-    render() {
-        return (
-            <div className="weather-box">
-                <div className="temperature">12 °C</div>
-                <div className="weather">Sunny</div>
-            </div>
-        )
-    }
+function WeatherBox(props) {
+    return (
+        <div className="weather-box">
+            <div className="temperature">{ Math.round(props.weather.main.temp) } °C</div>
+            <div className="weather">{ props.weather.weather[0].description }</div>
+        </div>
+    )
 }
 
 export default WeatherBox;
