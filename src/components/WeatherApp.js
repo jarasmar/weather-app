@@ -43,7 +43,13 @@ class WeatherApp extends React.Component {
 
     render() {
         return(
-            <div className='app'>
+            <div className={ 
+                (typeof this.state.weather.main != "undefined") 
+                  ? ((this.state.weather.main.temp > 16) 
+                    ? 'app warm' 
+                    : 'app') 
+                  : 'app' 
+            }>
                 <main>
                     <SearchBar 
                         onChange={ (e) => this.handleChange(e) } 
